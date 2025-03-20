@@ -1,6 +1,0 @@
----
-
-- hosts: all
-  tasks:
-    - shell: echo 'hello world'
-        

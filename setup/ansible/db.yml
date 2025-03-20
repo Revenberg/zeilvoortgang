@@ -11,7 +11,7 @@
         - name: zeilvoortgang
           encoding: utf8
           collation: utf8_bin
-        - name: my_imported_db
+        - name: zeilvoortgang
           initial_import: ~/ansible/roles/ansible-role-mysql/files/import.sql
       mysql_users:
         - name: zeilvoortgang

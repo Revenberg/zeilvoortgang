@@ -16,7 +16,7 @@ git clone https://github.com/Revenberg/zeilvoortgang.git
 cd ~/zeilvoortgang
 git config --global pull.rebase false
 
-cp -r ~/zeilvoortgang/ansible ~/ansible
+cp -r ~/zeilvoortgang/setup/ansible ~/ansible
 
 cd ~/ansible
 

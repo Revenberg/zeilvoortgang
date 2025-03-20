@@ -128,7 +128,7 @@
     login_user: root
     login_password: "{{ mysql_root_password }}"
     query:
-    - show tables in  %(table)s;
+    - show tables in  %(table);
     named_args:
       table: "{{ item.name }}"
   register: r_query

@@ -5,11 +5,6 @@
   gather_facts: true
 
   roles:
-    - name: Assemble from fragments from a directory
-      ansible.builtin.assemble:
-        src: ~/zeilvoortgang/src/main/resources/sql
-        dest: ~/ansible/roles/ansible-role-mysql/files/import.sql
-
     - role: ansible-role-mysql 
       mysql_port: 3307
       mysql_databases:

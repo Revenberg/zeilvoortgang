@@ -16,9 +16,10 @@ git clone https://github.com/Revenberg/zeilvoortgang.git
 cd ~/zeilvoortgang
 git config --global pull.rebase false
 
-cp ansible.cfg ~/.ansible.cfg
-cp ansible-hosts ~/.ansible-hosts
-cp helloworld.yml ~/helloworld.yml
+cp ~/setup/ansible.cfg ~/.ansible.cfg;
+cp ~/setup/ansible-hosts ~/.ansible-hosts;
+cp ~/setup/helloworld.yml ~/helloworld.yml;
+
 cd -
 
 ansible-playbook helloworld.yml

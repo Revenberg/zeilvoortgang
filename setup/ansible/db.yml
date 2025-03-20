@@ -1,6 +1,6 @@
 ---
 - name: ansible-role-mysql
-  hosts: all
+  hosts: localhost
   become: true
   gather_facts: true
 

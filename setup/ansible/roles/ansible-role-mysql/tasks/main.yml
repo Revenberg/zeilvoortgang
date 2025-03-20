@@ -128,15 +128,14 @@
     login_user: root
     login_password: "{{ mysql_root_password }}"
     query:
-    - show tables in zeilvoortgang;
+    - show tables in  %(table)s;
+    named_args:
+      table: "{{ item.name }}"
   register: r_query
+  loop: "{{ mysql_databases }}"
+  loop_control:
+    label: "{{ item.name }}"
     
 - name: show
   debug:
     msg: "{{ r_query.query_result }}"
-
-
-# {{ item.name }}
-#  loop: "{{ mysql_databases }}"
-#  loop_control:
-#    label: "{{ item.name }}"

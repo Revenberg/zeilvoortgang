@@ -20,5 +20,6 @@ cp -r ~/zeilvoortgang/setup/ansible ~/
 
 cd ~/ansible
 
+ansible-playbook importSQL.yml
 ansible-playbook db.yml
 

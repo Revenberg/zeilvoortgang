@@ -21,7 +21,7 @@ cp -r ~/zeilvoortgang/setup/ansible ~/
 cd ~/ansible
 
 ansible-playbook helloworld.yml
-ansible-playbook db.yml
+ansible-playbook db.yml --connection=localhost
 
 
 sudo ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key

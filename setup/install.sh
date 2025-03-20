@@ -16,14 +16,13 @@ git clone https://github.com/Revenberg/zeilvoortgang.git
 cd ~/zeilvoortgang
 git config --global pull.rebase false
 
-cp -r ~/zeilvoortgang/setup/ansible ~/ansible
+cp -r ~/zeilvoortgang/setup/ansible ~/
 
 cd ~/ansible
 
 ansible-playbook helloworld.yml
+ansible-playbook db.yml
 
-mkdir /home/pi/ansible 2>/dev/null
-mkdir /home/pi/.ssh 2>/dev/null
 
 sudo ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key
 sudo ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key

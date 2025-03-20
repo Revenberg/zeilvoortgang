@@ -1,18 +1,18 @@
 - name: setup Mysql with medium_db db and remote login
   become: yes
-  hosts: Dbservers
+  hosts: localhost
   tasks:
     - name: Installing Mysql  and dependencies
       package:
        name: "{{item}}"
        state: present
        update_cache: yes
-     loop:
-       - mysql-server
-       - mysql-client 
-       - python3-mysqldb
-       - libmysqlclient-dev
-     become: yes
+      loop:
+        - mysql-server
+        - mysql-client 
+        - python3-mysqldb
+        - libmysqlclient-dev
+      become: yes
     - name: start and enable mysql service
       service:
         name: mysql

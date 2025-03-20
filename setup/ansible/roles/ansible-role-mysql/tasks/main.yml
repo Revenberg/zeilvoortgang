@@ -128,5 +128,5 @@
     login_user: root
     login_password: "{{ mysql_root_password }}"
     query:
-    - use zeilvoortgang;show tables;
+    - show tables in zeilvoortgang;
     single_transaction: true

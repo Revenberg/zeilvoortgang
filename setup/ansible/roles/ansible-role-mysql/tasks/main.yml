@@ -122,10 +122,20 @@
 - name: Flush handlers again
   ansible.builtin.meta: flush_handlers
 
-- name: Run several insert queries against db zeilvoortgang in single transaction
+- name: Run several insert queries against db
   community.mysql.mysql_query:
     login_unix_socket: "{{ mysql_socket }}"
     login_user: root
     login_password: "{{ mysql_root_password }}"
     query:
     - show tables in zeilvoortgang;
+    story_val: output
+- name: show
+  debug:
+    msg: "{{ output }}"
+
+    
+# {{ item.name }}
+#  loop: "{{ mysql_databases }}"
+#  loop_control:
+#    label: "{{ item.name }}"

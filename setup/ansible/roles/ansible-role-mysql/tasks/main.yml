@@ -129,12 +129,14 @@
     login_password: "{{ mysql_root_password }}"
     query:
     - show tables in zeilvoortgang;
-    story_val: output
+    named_args:
+      story_val: output
+    
 - name: show
   debug:
     msg: "{{ output }}"
 
-    
+
 # {{ item.name }}
 #  loop: "{{ mysql_databases }}"
 #  loop_control:

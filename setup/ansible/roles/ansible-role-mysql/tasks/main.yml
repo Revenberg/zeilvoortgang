@@ -129,12 +129,11 @@
     login_password: "{{ mysql_root_password }}"
     query:
     - show tables in zeilvoortgang;
-    named_args:
-      story_val: output
+  register: r_query
     
 - name: show
   debug:
-    msg: "{{ output }}"
+    msg: "{{ r_query.query_result }}"
 
 
 # {{ item.name }}

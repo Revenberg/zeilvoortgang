@@ -28,13 +28,13 @@
 - name: Build application JAR
   ansible.builtin.command:
     cmd: mvn clean package
-    chdir: /path/to/zeilvoortgang
-  environment:
-    JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64
+    chdir: ~/zeilvoortgang/src
+#  environment:
+#    JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64
 
 - name: Copy JAR file to deployment directory
   ansible.builtin.copy:
-    src: /path/to/zeilvoortgang/target/application.jar
+    src: ~/zeilvoortgang/src/target/application.jar
     dest: /opt/application/application.jar
     owner: root
     group: root

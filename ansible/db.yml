@@ -23,6 +23,6 @@
 
     - role: ansible-java
 
-    - role: build_application
+    - role: build_zeilvoortgang
 
-    - role: run_application
+    - role: run_zeilvoortgang

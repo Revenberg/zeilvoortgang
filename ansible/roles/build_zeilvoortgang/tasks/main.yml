@@ -11,25 +11,12 @@
     state: present
   when: ansible_os_family == "Debian"
 
-#- name: Ensure Java is installed
-#  ansible.builtin.package:
-#    name: openjdk-11-jdk
-#    state: present
-
-#- name: Copy Maven settings (optional)
-#  ansible.builtin.copy:
-#    src: settings.xml
-#    dest: /root/.m2/settings.xml
-#    owner: root
-#    group: root
-#    mode: '0644'
-
-- name: Build application JAR
+- name: Build zeilvoortgang JAR
   ansible.builtin.command:
     cmd: mvn clean package
     chdir: ~/zeilvoortgang
 
-- name: mkdir appplication directory
+- name: mkdir zeilvoortgang directory
   ansible.builtin.file:
     path: /opt/zeilvoortgang
     state: directory

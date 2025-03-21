@@ -11,10 +11,10 @@
     state: present
   when: ansible_os_family == "Debian"
 
-- name: Ensure Java is installed
-  ansible.builtin.package:
-    name: openjdk-11-jdk
-    state: present
+#- name: Ensure Java is installed
+#  ansible.builtin.package:
+#    name: openjdk-11-jdk
+#    state: present
 
 - name: Copy Maven settings (optional)
   ansible.builtin.copy:

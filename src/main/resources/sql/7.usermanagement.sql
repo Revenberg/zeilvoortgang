@@ -5,10 +5,10 @@
 
 
 INSERT INTO `zeilvoortgang`.`users` (`userId`, `username`, `password`, `email`, `lastUpdateTMS`, `lastUpdateIdentifier`) VALUES
-(1, 'admin', '$2a$10$7QJ9eJ9z5j9J9J9J9J9J9uJ9J9J9J9J9J9J9J9J9J9J9J9J9J9J9', 'admin@test.com', NOW(), 'import'),
-(2, 'user', '$2a$10$8QJ8eJ8z5j8J8J8J8J8J8uJ8J8J8J8J8J8J8J8J8J8J8J8J8J8', 'user@test.com', NOW(), 'import'),
-(3, 'trainer', '$2a$10$8QJ8eJ8z5j8J8J8J8J8J8uJ8J8J8J8J8J8J8J8J8J8J8J8J8J8', 'trainer@test.com', NOW(), 'import'),
-(4, 'cursist', '$2a$10$8QJ8eJ8z5j8J8J8J8J8J8uJ8J8J8J8J8J8J8J8J8J8J8J8J8J8', 'cursist@test.com', NOW(), 'import');
+(1, 'admin', '$2a$10$gcysOFrMetFetyyT2Oxrb.sbV5IqPH5ZfzsbNRXwsY53aqb1QifKm', 'admin@test.com', NOW(), 'import'),
+(2, 'user', '$2a$10$YCAs.0rRmhTyKF4BLc0p0uOGBu61c33yhbEqm3vkga8OpL8ZWZtTu', 'user@test.com', NOW(), 'import'),
+(3, 'trainer', '$2a$10$YCAs.0rRmhTyKF4BLc0p0uOGBu61c33yhbEqm3vkga8OpL8ZWZtTu', 'trainer@test.com', NOW(), 'import'),
+(4, 'cursist', '$2a$10$YCAs.0rRmhTyKF4BLc0p0uOGBu61c33yhbEqm3vkga8OpL8ZWZtTu', 'cursist@test.com', NOW(), 'import');
 
 INSERT INTO `zeilvoortgang`.`organizations` (`organizationId`, `name`, `lastUpdateTMS`, `lastUpdateIdentifier`) VALUES
 (1, 'zeilvoortgang', NOW(), 'import');

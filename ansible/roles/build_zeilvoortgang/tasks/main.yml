@@ -25,11 +25,13 @@
     mode: '0755'
 
 - name: Copy JAR file to deployment directory
-  ansible.builtin.copy:
-    src: ~/zeilvoortgang/target/zeilvoortgang*-SNAPSHOT.jar
+  copy:
+    src: "{{ item }}"
     dest: /opt/zeilvoortgang/zeilvoortgang.jar
-    remote_src: yes
     owner: root
     group: root
-    mode: '0755'
+    remote_src: yes
+    mode: 0755
+  with_fileglob:
+    - "~/zeilvoortgang/target/zeilvoortgang*-SNAPSHOT.jar"
 

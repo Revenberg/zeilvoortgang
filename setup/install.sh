@@ -16,10 +16,9 @@ git clone https://github.com/Revenberg/zeilvoortgang.git
 cd ~/zeilvoortgang
 git config --global pull.rebase false
 
-cp -r ~/zeilvoortgang/setup/ansible ~/
+cp -r ~/zeilvoortgang/ansible ~/
 
 cd ~/ansible
 
-ansible-playbook importSQL.yml
 ansible-playbook db.yml
 

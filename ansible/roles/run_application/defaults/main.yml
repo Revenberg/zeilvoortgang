@@ -1,6 +1,3 @@
 ---
 application_jar: application.jar
 application_service_name: application
-java_package:
-  RedHat: java-11-openjdk
-  Debian: openjdk-11-jdk

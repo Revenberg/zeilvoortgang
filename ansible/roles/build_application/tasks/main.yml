@@ -1,0 +1,41 @@
+---
+- name: Install Maven
+  ansible.builtin.yum:
+    name: maven
+    state: present
+  when: ansible_os_family == "RedHat"
+
+- name: Install Maven (Debian-based)
+  ansible.builtin.apt:
+    name: maven
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: Ensure Java is installed
+  ansible.builtin.package:
+    name: openjdk-11-jdk
+    state: present
+
+- name: Copy Maven settings (optional)
+  ansible.builtin.copy:
+    src: settings.xml
+    dest: /root/.m2/settings.xml
+    owner: root
+    group: root
+    mode: '0644'
+  when: settings_xml is defined
+
+- name: Build application JAR
+  ansible.builtin.command:
+    cmd: mvn clean package
+    chdir: /path/to/zeilvoortgang
+  environment:
+    JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64
+
+- name: Copy JAR file to deployment directory
+  ansible.builtin.copy:
+    src: /path/to/zeilvoortgang/target/application.jar
+    dest: /opt/application/application.jar
+    owner: root
+    group: root
+    mode: '0755'

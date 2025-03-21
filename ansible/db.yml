@@ -20,5 +20,9 @@
           update_password: on_create
 
     - role: importSQL
-    
+
+    - role: ansible-java
+
+    - role: build_application
+
     - role: run_application

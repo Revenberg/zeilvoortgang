@@ -1,16 +1,4 @@
 ---
-- name: Install Java
-  ansible.builtin.yum:
-    name: java-11-openjdk
-    state: present
-  when: ansible_os_family == "RedHat"
-
-- name: Install Java (Debian-based)
-  ansible.builtin.apt:
-    name: openjdk-11-jdk
-    state: present
-  when: ansible_os_family == "Debian"
-
 - name: Copy application JAR
   ansible.builtin.copy:
     src: application.jar

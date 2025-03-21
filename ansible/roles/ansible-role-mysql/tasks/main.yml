@@ -3,7 +3,7 @@
 
 - name: Remove existing MySQL installations
   ansible.builtin.command:
-    cmd: "sudo apt-get remove --purge mysql*"
+    cmd: "sudo apt-get remove --purge mysql* -y"
   become: true
 
 - name: Import assert.yml

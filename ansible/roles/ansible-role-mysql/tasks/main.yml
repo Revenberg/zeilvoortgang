@@ -26,6 +26,7 @@
     section: "{{ item.section }}"
     option: "{{ item.option }}"
     value: "{{ item.value }}"
+    port: "{{ item.port }}"
     mode: "0644"
   loop: "{{ mysql_configuration_options }}"
   loop_control:
@@ -73,7 +74,6 @@
     login_unix_socket: "{{ mysql_socket }}"
     login_user: root
     login_password: "{{ mysql_root_password }}"
-    login_port: 3306
   loop: "{{ mysql_databases }}"
   loop_control:
     label: "{{ item.name }}"

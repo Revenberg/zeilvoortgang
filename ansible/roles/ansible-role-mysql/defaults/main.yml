@@ -39,3 +39,4 @@ mysql_configuration_options:
   - section: mysqld
     option: log-bin-trust-function-creators
     value: "1"
+

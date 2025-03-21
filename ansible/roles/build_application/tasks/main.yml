@@ -28,7 +28,7 @@
 - name: Build application JAR
   ansible.builtin.command:
     cmd: mvn clean package
-    chdir: ~/zeilvoortgang/src
+    chdir: ~/zeilvoortgang
 #  environment:
 #    JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64
 

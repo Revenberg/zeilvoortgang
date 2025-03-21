@@ -5,6 +5,8 @@
   gather_facts: true
 
   roles:
+    - role: createTablesSQL
+
     - role: ansible-role-mysql 
       mysql_port: 3306
       mysql_databases:
@@ -18,8 +20,6 @@
           password: zeilvoortgang
           priv: "zeilvoortgang.*:ALL"
           update_password: on_create
-
-    - role: importSQL
 
     - role: ansible-java
 

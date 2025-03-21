@@ -1,11 +1,8 @@
 ---
 # tasks file for mysql
 
-- name: Remove existing MySQL installations
-  ansible.builtin.command:
-    cmd: "sudo apt-get remove --purge mysql* -y"
-  become: true
-
+# sudo apt-get remove --purge mysql* -y
+  
 - name: Import assert.yml
   ansible.builtin.import_tasks:
     file: assert.yml

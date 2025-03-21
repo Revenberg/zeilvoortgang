@@ -1,11 +1,11 @@
 [Unit]
-Description=Java Application Service
+Description=Java zeilvoortgang Service
 After=network.target
 
 [Service]
 User=root
-WorkingDirectory=/opt/application
-ExecStart=/usr/bin/java -jar /opt/application/application.jar
+WorkingDirectory=/opt/zeilvoortgang
+ExecStart=/usr/bin/java -jar /opt/zeilvoortgang/zeilvoortgang.jar
 Restart=always
 RestartSec=10
 Environment=SPRING_PROFILES_ACTIVE=prod

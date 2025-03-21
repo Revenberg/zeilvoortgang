@@ -28,6 +28,8 @@
   ansible.builtin.copy:
     src: ~/zeilvoortgang/target/zeilvoortgang*-SNAPSHOT.jar
     dest: /opt/zeilvoortgang/zeilvoortgang.jar
+    remote_src: yes
     owner: root
     group: root
     mode: '0755'
+

@@ -29,11 +29,18 @@
     cmd: mvn clean package
     chdir: ~/zeilvoortgang
 
+- name: mkdir appplication directory
+  ansible.builtin.file:
+    path: /opt/zeilvoortgang
+    state: directory
+    owner: root
+    group: root
+    mode: '0755'
 
 - name: Copy JAR file to deployment directory
   ansible.builtin.copy:
-    src: ~/zeilvoortgang/src/target/application.jar
-    dest: /opt/application/application.jar
+    src: ~/zeilvoortgang/target/zeilvoortgang*-SNAPSHOT.jar
+    dest: /opt/zeilvoortgang/zeilvoortgang.jar
     owner: root
     group: root
     mode: '0755'

@@ -1,6 +1,11 @@
 ---
 # tasks file for mysql
 
+- name: Remove existing MySQL installations
+  ansible.builtin.command:
+    cmd: "sudo apt-get remove --purge mysql*"
+  become: true
+
 - name: Import assert.yml
   ansible.builtin.import_tasks:
     file: assert.yml
@@ -68,6 +73,7 @@
     login_unix_socket: "{{ mysql_socket }}"
     login_user: root
     login_password: "{{ mysql_root_password }}"
+    login_port: 3306
   loop: "{{ mysql_databases }}"
   loop_control:
     label: "{{ item.name }}"

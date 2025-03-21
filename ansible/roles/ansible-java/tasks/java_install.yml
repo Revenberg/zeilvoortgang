@@ -1,14 +1,19 @@
 ---
+- name: refresh apt cache
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
 - name: Install Java package (Ubuntu/Debian)
   apt:
     name: "{{ java_apt_package }}"
     state: present
-    update_cache: yes
+    update_cache: no
   when: ansible_os_family == 'Debian'
 
 - name: Install Java package (CentOS/RHEL)
   yum:
     name: "{{ java_yum_package }}"
     state: present
-    update_cache: yes
+    update_cache: no
   when: ansible_os_family == 'RedHat'

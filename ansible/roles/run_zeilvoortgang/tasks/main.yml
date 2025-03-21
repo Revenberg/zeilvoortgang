@@ -1,12 +1,4 @@
 ---
-- name: Copy zeilvoortgang JAR
-  ansible.builtin.copy:
-    src: zeilvoortgang.jar
-    dest: /opt/zeilvoortgang/zeilvoortgang.jar
-    owner: root
-    group: root
-    mode: '0755'
-
 - name: Create systemd service file
   ansible.builtin.template:
     src: zeilvoortgang.service.j2

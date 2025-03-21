@@ -16,21 +16,19 @@
 #    name: openjdk-11-jdk
 #    state: present
 
-- name: Copy Maven settings (optional)
-  ansible.builtin.copy:
-    src: settings.xml
-    dest: /root/.m2/settings.xml
-    owner: root
-    group: root
-    mode: '0644'
-  when: settings_xml is defined
+#- name: Copy Maven settings (optional)
+#  ansible.builtin.copy:
+#    src: settings.xml
+#    dest: /root/.m2/settings.xml
+#    owner: root
+#    group: root
+#    mode: '0644'
 
 - name: Build application JAR
   ansible.builtin.command:
     cmd: mvn clean package
     chdir: ~/zeilvoortgang
-#  environment:
-#    JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64
+
 
 - name: Copy JAR file to deployment directory
   ansible.builtin.copy:

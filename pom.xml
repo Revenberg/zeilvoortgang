@@ -239,7 +239,7 @@
 					<source>17</source>
 					<target>17</target>
 				    <meminitial>256m</meminitial>
-                    <maxmem>1024m</maxmem>
+                    <maxmem>768m</maxmem>
                 </configuration>
 			</plugin>
 		</plugins>

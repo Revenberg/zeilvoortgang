@@ -1,9 +1,0 @@
----
-- name: importSQL
-  hosts: localhost
-  become: true
-  gather_facts: true
-
-  roles:
-    - role: importSQL
-    

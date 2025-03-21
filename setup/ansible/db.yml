@@ -18,3 +18,7 @@
           password: zeilvoortgang
           priv: "zeilvoortgang.*:ALL"
           update_password: on_create
+
+    - role: importSQL
+    
+    - role: run_application

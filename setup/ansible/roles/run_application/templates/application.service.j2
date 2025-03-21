@@ -1,0 +1,14 @@
+[Unit]
+Description=Java Application Service
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/opt/application
+ExecStart=/usr/bin/java -jar /opt/application/application.jar
+Restart=always
+RestartSec=10
+Environment=SPRING_PROFILES_ACTIVE=prod
+
+[Install]
+WantedBy=multi-user.target

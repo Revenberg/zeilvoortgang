@@ -4,4 +4,3 @@
   ansible.builtin.assemble:
     src: ~/zeilvoortgang/src/main/resources/sql
     dest: ~/ansible/roles/ansible-role-mysql/files/import.sql
-  

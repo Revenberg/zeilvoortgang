@@ -20,5 +20,6 @@ cp -r ~/zeilvoortgang/ansible ~/
 
 cd ~/ansible
 
-ansible-playbook db.yml
+ansible-playbook api.yml
+ansible-playbook react.yml
 
